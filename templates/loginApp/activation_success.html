@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="container text-center my-5">
+    <h2 class="text-success">Your account has been activated successfully!</h2>
+    <a href="{% url 'login_App:login_customer' %}" class="btn btn-primary mt-3">Login Now</a>
+</div>
+{% endblock %}

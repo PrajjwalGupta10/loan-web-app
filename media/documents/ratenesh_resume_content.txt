@@ -1,0 +1,69 @@
+
+summary
+Accomplished Linux System Administrator with a proven track record at Tata Consultancy Services, excelling in managing RHEL 6x/7x/8x servers and leading successful system migrations.
+ Expert in Redhat Linux and proficient in collaboration, demonstrated through seamless cross-functional team projects. 
+Achieved significant system performance optimizations and reliability, underscoring technical prowess and problem-solving skills.
+
+
+
+
+
+Experience
+
+Managing RHEL 6x/7x/8x servers, including installation, patching, upgrades, and troubleshooting
+
+Collaborated with cross-functional teams for system migrations and upgrades with minimal disruption
+
+Administered and maintained physical servers, optimizing performance and reliability
+
+Maintained optimal and continuous system operations with daily monitoring, backups and application upgrades.
+
+Planned and executed physical server migrations and upgrades in collaboration with data center teams
+
+Documented system configurations, procedures, and troubleshooting guides for knowledge transfer
+Administered and supported  Cisco, and VMware technologies.
+
+Investigated and troubleshoot issues.
+
+Ensured data backup procedures were followed, leading to successful data recovery when needed.
+
+Monitored, updated, and resolved incidents using incident management systems
+
+Managed scheduled tasks using Crontab and performed backups with Rsync, Zip, and Tar
+Familiar with ESP, OSST, UCS Central, UCS Manager, vCenter, IAC, and RMS tool
+
+Maintained operational, configuration, or other procedural documentation.
+
+Applied OS patches and upgrades on regular basis, and upgraded administrative tools and utilities.
+
+
+
+
+
+
+
+
+
+
+project----
+
+CISCO ITIS Project
+
+Operating System Management:
+
+Managed RHEL 6x/7x/8x servers, including installation, patching, upgrades, and troubleshooting.
+Collaborated with cross-functional teams to ensure seamless system migrations and upgrades with minimal disruption.
+Server Administration:
+
+Administered and maintained physical servers, optimizing performance and reliability.Experinec
+Planned and executed physical server migrations and upgrades in collaboration with data center teams.
+Documentation and Knowledge Transfer:
+
+Documented system configurations, standard operating procedures, and troubleshooting guides to ensure effective knowledge sharing.
+Incident and Task Management:
+
+Monitored, updated, and resolved incidents using incident management systems.
+Scheduled and managed tasks using Crontab, and performed data backups with Rsync, Zip, and Tar.
+Tools and Technologies:
+
+Worked extensively with tools and platforms such as ESP, OSST, UCS Central, UCS Manager, vCenter, IAC, and RMS tool.

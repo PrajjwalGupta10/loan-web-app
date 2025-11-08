@@ -1,0 +1,39 @@
+{% extends 'admin/adminbase.html' %}
+
+{% block body_block %}
+<div class="container my-5">
+    <h2 class="text-center text-primary">Loan Documents</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID Proof</th>
+            <td>
+                {% if loan.identity_proof %}
+                    <a href="{{ loan.identity_proof.url }}" target="_blank">View Document</a>
+                {% else %}
+                    Not Uploaded
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>Income Proof</th>
+            <td>
+                {% if loan.income_proof %}
+                    <a href="{{ loan.income_proof.url }}" target="_blank">View Document</a>
+                {% else %}
+                    Not Uploaded
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>Bank Statement</th>
+            <td>
+                {% if loan.bank_statement %}
+                    <a href="{{ loan.bank_statement.url }}" target="_blank">View Document</a>
+                {% else %}
+                    Not Uploaded
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

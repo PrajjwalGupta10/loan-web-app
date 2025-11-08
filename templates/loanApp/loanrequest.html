@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title_block %}
+Loan Request
+{% endblock %}
+
+{% block body_block %}
+
+{% include 'navbar.html' %}
+
+<div class="container my-5">
+    <div class="row mb-5">
+        <div class="p-5 m-auto rounded shadow-lg col-md-6 bg-body">
+            <h3 class="text-center text-success mb-4">Request For Loan</h3>
+
+            <form method="POST" class="my-4" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- Loan Category -->
+                <div class="mb-4 input-group">
+                    <div class="input-group-text">Loan Category</div>
+                    {% render_field form.category class="form-control" required="true" %}
+                </div>
+
+                <!-- Reason For Loan -->
+                <div class="mb-4 form-outline">
+                    {% render_field form.reason class="form-control" required="true" %}
+                    <label class="form-label">Reason For Loan</label>
+                </div>
+
+                <!-- Terms & Conditions Checkbox with Modal -->
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="rememberCheck" disabled>
+                    <label class="form-check-label" for="rememberCheck">
+                        I Agree to Terms & Conditions
+                    </label>
+                    <a href="#" class="text-primary ms-2" data-bs-toggle="modal" data-bs-target="#termsModal">
+                        (View T&C)
+                    </a>
+                </div>
+
+                <!-- <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="rememberCheck" />
+                        <label class="form-check-label" for="rememberCheck">Remember me (View T&C)</label>
+                    </div>
+
+                    <script>
+                        document.getElementById("rememberCheck").addEventListener("change", function () {
+                            if (this.checked) { 
+                                window.open
+                                // window.open("{% url 'loanApp:terms_conditions' %}", "_blank");
+                            }
+                        }); 
+                    </script> -->
+
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-info btn-rounded w-100">Apply</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="max-height:300px; overflow-y:auto;">
+        <p>
+            <strong>Loan Agreement Terms:</strong><br>
+            1. The loan must be repaid according to the specified schedule.<br>
+            2. Late payments will incur penalties.<br>
+            3. The applicant agrees to provide accurate financial information.<br>
+            4. Failure to comply with payment terms may lead to legal action.<br>
+            5. All disputes will be resolved under the jurisdiction of the loan provider.<br>
+            6. The lender reserves the right to change interest rates with prior notice.<br>
+            <br>
+            By clicking "I Agree", you confirm that you have read and accepted all the above terms.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Decline</button>
+        <button type="button" class="btn btn-success" id="agreeBtn" data-bs-dismiss="modal">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    // When user clicks "I Agree"
+    document.getElementById('agreeBtn').addEventListener('click', function () {
+        const checkbox = document.getElementById('rememberCheck');
+        checkbox.checked = true;
+        checkbox.disabled = false; // Enable the checkbox
+    });
+</script>
+
+
+
+{% include "footer.html" %}
+
+{% endblock %}
